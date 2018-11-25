@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from './Button'
+import Paper from './Paper'
 
 class Counter extends React.Component {
     state =
@@ -24,36 +26,36 @@ class Counter extends React.Component {
 
     render() {
         return (
-            <div>
+            <Paper>
                 <h1>
                     {this.state.number}
                 </h1>
-                <button
+                <Button
                     onClick={this.incHandler}
+                    label={"+"}
                 >
-                    +
-                </button>
-                <button
+                </Button>
+                <Button
                     onClick={this.incByFiveHandler}
+                    label={"+5"}
                 >
-                    +5
-                </button>
-                <button
+                </Button>
+                <Button
                     onClick={this.decHandler}
+                    label={"-"}
                 >
-                    -
-                </button>
-                <button
+                </Button>
+                <Button
                     onClick={this.decByFiveHandler}
+                    label={"-5"}
                 >
-                    -5
-                </button>
-                <button
+                </Button>
+                <Button
                     onClick={this.resetCounter}
+                    label={"reset"}
                 >
-                    reset
-                </button>
-            </div>
+                </Button>
+            </Paper>
         )
     }
 }
